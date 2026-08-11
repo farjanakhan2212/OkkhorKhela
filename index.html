@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অক্ষরখেলা - Kids Bengali Learning App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="app-title">অক্ষরখেলা</h1>
+    <p class="app-subtitle">বাংলা বর্ণমালা শেখার খেলা</p>
+  </header>
+
+  <main id="book">
+    <section class="letter-section book-page">
+      <h2 class="section-title">স্বরবর্ণ</h2>
+      <div id="sworoborno" class="letter-grid"></div>
+    </section>
+
+    <section class="letter-section book-page">
+      <h2 class="section-title">ব্যঞ্জনবর্ণ</h2>
+      <div id="byonjonborno" class="letter-grid"></div>
+    </section>
+
+    <section class="letter-section book-page">
+      <h2 class="section-title">চিহ্ন</h2>
+      <div id="chinho" class="letter-grid"></div>
+    </section>
+
+    <section class="letter-section book-page">
+      <h2 class="section-title">স্বরচিহ্ন (কার)</h2>
+      <div id="sorochinho" class="letter-grid"></div>
+    </section>
+
+    <section class="letter-section book-page practice-section">
+      <h2 class="section-title">পড়ার অনুশীলন</h2>
+      <div class="practice-box">
+        <button id="practiceCard" class="practice-card" type="button" aria-label="শব্দ শুনুন">
+          <div id="practiceEmoji" class="practice-emoji">📖</div>
+          <div id="practiceLetter" class="practice-letter">ক</div>
+          <div id="practiceWord" class="practice-word">কোরআন</div>
+          <div class="practice-hint">🔊 চাপো আর শুনো!</div>
+        </button>
+        <div class="practice-nav">
+          <button id="prevBtn" class="nav-btn" type="button">⬅️ আগে</button>
+          <div id="practiceCounter" class="practice-counter">১ / ২৮</div>
+          <button id="nextBtn" class="nav-btn" type="button">পরেরটা ➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section book-page writing-section">
+      <h2 class="section-title">লেখা অনুশীলন</h2>
+      <div id="writingBox" class="writing-box">
+        <div id="writingLabel" class="writing-label">✏️ ক — কুরআন</div>
+        <div class="canvas-wrap">
+          <canvas id="writeCanvas" class="write-canvas" aria-label="বাংলা অক্ষর লেখার জায়গা"></canvas>
+        </div>
+        <div id="writingSuccess" class="writing-success hidden"></div>
+        <div class="writing-nav">
+          <button id="writePrevBtn" class="nav-btn" type="button">⬅️ আগেরটা</button>
+          <button id="clearBtn" class="nav-btn" type="button">🧽 মুছে ফেলো</button>
+          <button id="retryBtn" class="nav-btn" type="button">🔄 আবার চেষ্টা</button>
+          <button id="writeNextBtn" class="nav-btn" type="button">পরেরটা ➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section book-page quiz-section">
+      <h2 class="section-title">কুইজ খেলা</h2>
+      <div class="quiz-box">
+        <div id="quizStart" class="quiz-start">
+          <div class="quiz-start-emoji">🎮</div>
+          <p class="quiz-start-text">বাংলা শেখার মজার খেলা!</p>
+          <button id="quizStartBtn" class="nav-btn" type="button">খেলা শুরু করো 🚀</button>
+        </div>
+
+        <div id="quizGame" class="quiz-game hidden">
+          <div class="quiz-top">
+            <div id="quizProgress" class="quiz-chip">প্রশ্ন ১ / ১০</div>
+            <div id="quizScore" class="quiz-chip">⭐ ০</div>
+          </div>
+          <div id="quizQuestion" class="quiz-question"></div>
+          <div id="quizPrompt" class="quiz-prompt"></div>
+          <div id="quizOptions" class="quiz-options"></div>
+          <div id="quizFeedback" class="quiz-feedback"></div>
+        </div>
+
+        <div id="quizResult" class="quiz-result hidden">
+          <div id="quizStars" class="quiz-stars"></div>
+          <div id="quizFinalScore" class="quiz-final-score"></div>
+          <button id="quizRetryBtn" class="nav-btn" type="button">🔄 আবার খেলো</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="bookDots" class="book-dots" aria-label="পাতা নির্বাচন"></div>
+
+    <div class="book-nav">
+      <button id="bookPrevBtn" class="nav-btn" type="button">⬅️ আগের পাতা</button>
+      <div id="bookCounter" class="practice-counter">১ / ৭</div>
+      <button id="bookNextBtn" class="nav-btn" type="button">পরের পাতা ➡️</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>চিঠিটা চাপো আর শুনো! 🎵</p>
+  </footer>
+
+  <div id="voiceStatus" class="voice-status hidden">🔊 বাঙালি ভয়েস পাওয়া গেছে!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
